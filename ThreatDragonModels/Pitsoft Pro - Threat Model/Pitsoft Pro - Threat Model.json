@@ -38,6 +38,7 @@
             },
             "visible": true,
             "shape": "actor",
+            "zIndex": 1,
             "ports": {
               "groups": {
                 "top": {
@@ -121,7 +122,6 @@
               ]
             },
             "id": "a9dced46-6366-446e-a420-56246b950e96",
-            "zIndex": 1,
             "data": {
               "type": "tm.Actor",
               "name": "Users",
@@ -154,6 +154,7 @@
             },
             "visible": true,
             "shape": "actor",
+            "zIndex": 2,
             "ports": {
               "groups": {
                 "top": {
@@ -237,7 +238,6 @@
               ]
             },
             "id": "312882e3-1ab7-4aae-8e83-07c94bb699bf",
-            "zIndex": 2,
             "data": {
               "type": "tm.Actor",
               "name": "Cloud\nInfrastucture",
@@ -270,6 +270,7 @@
             },
             "visible": true,
             "shape": "actor",
+            "zIndex": 3,
             "ports": {
               "groups": {
                 "top": {
@@ -353,7 +354,6 @@
               ]
             },
             "id": "a0d85d87-f35e-4bdf-afba-0e1fba7e5f8d",
-            "zIndex": 3,
             "data": {
               "type": "tm.Actor",
               "name": "Data \nSources",
@@ -386,6 +386,7 @@
             },
             "visible": true,
             "shape": "process",
+            "zIndex": 4,
             "ports": {
               "groups": {
                 "top": {
@@ -469,7 +470,6 @@
               ]
             },
             "id": "7a07bdfe-b148-4668-8e18-20e3754b2996",
-            "zIndex": 4,
             "data": {
               "type": "tm.Process",
               "name": "Web\nApplication",
@@ -505,6 +505,7 @@
             },
             "visible": true,
             "shape": "process",
+            "zIndex": 5,
             "ports": {
               "groups": {
                 "top": {
@@ -600,8 +601,7 @@
               "isWebApplication": false,
               "privilegeLevel": "",
               "threats": []
-            },
-            "zIndex": 5
+            }
           },
           {
             "position": {
@@ -624,6 +624,7 @@
             },
             "visible": true,
             "shape": "process",
+            "zIndex": 6,
             "ports": {
               "groups": {
                 "top": {
@@ -719,8 +720,7 @@
               "isWebApplication": false,
               "privilegeLevel": "",
               "threats": []
-            },
-            "zIndex": 6
+            }
           },
           {
             "position": {
@@ -743,6 +743,7 @@
             },
             "visible": true,
             "shape": "process",
+            "zIndex": 7,
             "ports": {
               "groups": {
                 "top": {
@@ -838,13 +839,12 @@
               "isWebApplication": false,
               "privilegeLevel": "",
               "threats": []
-            },
-            "zIndex": 7
+            }
           },
           {
             "position": {
               "x": 770,
-              "y": 510
+              "y": 550
             },
             "size": {
               "width": 120,
@@ -865,6 +865,7 @@
             },
             "visible": true,
             "shape": "store",
+            "zIndex": 8,
             "ports": {
               "groups": {
                 "top": {
@@ -948,7 +949,6 @@
               ]
             },
             "id": "caff5844-e4f5-4c1b-8e4f-4a8e80a65c09",
-            "zIndex": 8,
             "data": {
               "type": "tm.Store",
               "name": "Database",
@@ -988,6 +988,7 @@
             },
             "visible": true,
             "shape": "store",
+            "zIndex": 9,
             "ports": {
               "groups": {
                 "top": {
@@ -1071,7 +1072,6 @@
               ]
             },
             "id": "7556bc8f-0974-45b1-aa95-d7864d0ef505",
-            "zIndex": 9,
             "data": {
               "type": "tm.Store",
               "name": "Web App\nConfig",
@@ -1628,6 +1628,62 @@
               "cell": "5dd18211-2e53-4afe-808e-e28e17b0f3ab",
               "port": "ccc78429-4ec6-47e6-ab75-5da5cb8517d5"
             }
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Data Flow",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "labels": [
+              {
+                "attrs": {
+                  "label": {
+                    "text": "Data Flow"
+                  }
+                }
+              }
+            ],
+            "id": "83d023b2-7338-423a-8457-191c662a659d",
+            "source": {
+              "x": 850,
+              "y": 390
+            },
+            "target": {
+              "cell": "caff5844-e4f5-4c1b-8e4f-4a8e80a65c09",
+              "port": "1f3a0207-a645-4443-8d68-85ae8dba28f1"
+            },
+            "vertices": [
+              {
+                "x": 870,
+                "y": 470
+              }
+            ]
           }
         ]
       }
