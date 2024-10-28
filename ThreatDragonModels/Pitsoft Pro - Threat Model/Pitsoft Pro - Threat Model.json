@@ -251,8 +251,8 @@
           },
           {
             "position": {
-              "x": 640,
-              "y": 200
+              "x": 670,
+              "y": 180
             },
             "size": {
               "width": 112.5,
@@ -1457,10 +1457,60 @@
                 }
               }
             ],
+            "id": "6ec2f706-6f7d-4e8f-9b07-d542c169ca10",
+            "source": {
+              "x": 470,
+              "y": 260
+            },
+            "target": {
+              "cell": "6ff01941-17db-4179-9678-971545931426",
+              "port": "ac61efe1-3399-46e7-8e94-c94681be84fb"
+            }
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Data Flow",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "labels": [
+              {
+                "attrs": {
+                  "label": {
+                    "text": "Data Flow"
+                  }
+                }
+              }
+            ],
             "id": "aee12b20-66bf-4fe2-9c92-0bc53179b25a",
             "source": {
-              "x": 660,
-              "y": 390
+              "cell": "6ff01941-17db-4179-9678-971545931426",
+              "port": "c661b129-4ef2-4f0e-8d39-5ab00f3e424a"
             },
             "target": {
               "cell": "5dd18211-2e53-4afe-808e-e28e17b0f3ab",
@@ -1513,7 +1563,7 @@
                 }
               }
             ],
-            "id": "6eb2ee7b-7ff4-4d41-ad40-7533d4fc182a",
+            "id": "267ff8ac-df01-46a4-a465-1eb10714a003",
             "source": {
               "cell": "5dd18211-2e53-4afe-808e-e28e17b0f3ab",
               "port": "ac61efe1-3399-46e7-8e94-c94681be84fb"
@@ -1524,7 +1574,7 @@
             },
             "vertices": [
               {
-                "x": 720,
+                "x": 710,
                 "y": 340
               }
             ]
@@ -1569,14 +1619,14 @@
                 }
               }
             ],
-            "id": "6ec2f706-6f7d-4e8f-9b07-d542c169ca10",
+            "id": "e7a9ed6e-77de-4930-9544-2b306a2e38ca",
             "source": {
-              "x": 470,
-              "y": 260
+              "x": 723,
+              "y": 240
             },
             "target": {
-              "cell": "6ff01941-17db-4179-9678-971545931426",
-              "port": "ac61efe1-3399-46e7-8e94-c94681be84fb"
+              "cell": "5dd18211-2e53-4afe-808e-e28e17b0f3ab",
+              "port": "ccc78429-4ec6-47e6-ab75-5da5cb8517d5"
             }
           }
         ]
