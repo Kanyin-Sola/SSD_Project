@@ -251,8 +251,8 @@
           },
           {
             "position": {
-              "x": 670,
-              "y": 180
+              "x": 660,
+              "y": 170
             },
             "size": {
               "width": 112.5,
@@ -379,8 +379,8 @@
                 "text": "Web\nApplication"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -476,12 +476,41 @@
               "description": "Pitsoft Pro -  A user-friendly web application and provides insights and advice on performance improvement.",
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "handlesCardPayment": false,
               "handlesGoodsOrServices": false,
               "isWebApplication": true,
               "privilegeLevel": "",
-              "threats": []
+              "threats": [
+                {
+                  "id": "30ee6619-7b77-498e-8164-f55e38415c45",
+                  "title": "Malicious Users",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Spoofing",
+                  "description": "Malicious users could flood the system with requests, causing service disruption.",
+                  "mitigation": "Accept: Implement rate-limiting and server monitoring, but accept that some level of service disruption may be inevitable in the event of a large-scale attack.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 4,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 1,
+                "tampering": 0,
+                "repudiation": 0,
+                "informationDisclosure": 0,
+                "denialOfService": 0,
+                "elevationOfPrivilege": 0
+              }
+            },
+            "tools": {
+              "items": [
+                "boundary",
+                "button-remove"
+              ],
+              "name": null
             }
           },
           {
@@ -498,8 +527,8 @@
                 "text": "Data\nIngestion"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -595,12 +624,34 @@
               "description": "Ingests data from various sources, like sensors, then transforms it as needed, and stores it in the database",
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "handlesCardPayment": false,
               "handlesGoodsOrServices": false,
               "isWebApplication": false,
               "privilegeLevel": "",
-              "threats": []
+              "threats": [
+                {
+                  "id": "f8d911bd-dd8d-4da5-b685-d7c528e65ae9",
+                  "title": "Malicious Data Ingested",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Tampering",
+                  "description": "Data being ingested into the database could be tampered with, resulting in incorrect or malicious data.",
+                  "mitigation": "Reduce: Implement data validation to detect and prevent tampered data. Monitor devices for anomalies and regularly update software and hardware to reduce vulnerabilities.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 7,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 0,
+                "tampering": 1,
+                "repudiation": 0,
+                "informationDisclosure": 0,
+                "denialOfService": 0,
+                "elevationOfPrivilege": 0
+              }
             }
           },
           {
@@ -617,8 +668,8 @@
                 "text": "Authentication\nSystem"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -714,12 +765,34 @@
               "description": "Manages user logins, registration, and role-based access controls.",
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "handlesCardPayment": false,
               "handlesGoodsOrServices": false,
               "isWebApplication": false,
               "privilegeLevel": "",
-              "threats": []
+              "threats": [
+                {
+                  "id": "9286c5e1-8cc9-4be1-af9d-ed60cbdc4199",
+                  "title": "Exposed User Credentials",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Information disclosure",
+                  "description": "Sensitive user credentials could be exposed during transmission.",
+                  "mitigation": "Transfer: Use a third-party secure transmission service or SSL/TLS encryption to handle credential transmission.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 5,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 0,
+                "tampering": 0,
+                "repudiation": 0,
+                "informationDisclosure": 1,
+                "denialOfService": 0,
+                "elevationOfPrivilege": 0
+              }
             }
           },
           {
@@ -736,8 +809,8 @@
                 "text": "API Gateway"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -833,12 +906,34 @@
               "description": "Handles data processing, analytics,\n and AI-driven insights. \nHandles requests between frontend,\n backend and other services",
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "handlesCardPayment": false,
               "handlesGoodsOrServices": false,
               "isWebApplication": false,
               "privilegeLevel": "",
-              "threats": []
+              "threats": [
+                {
+                  "id": "fae2f208-b03e-4630-99da-1e63138363f9",
+                  "title": "Unauthorised Access",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Elevation of privilege",
+                  "description": "Exploiting vulnerabilities in the API gateway to gain unauthorised higher-level access.",
+                  "mitigation": "Reduce: Implement least privilege principles to grant users only the necessary permissions. Regularly review and update access controls.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 1,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 0,
+                "tampering": 0,
+                "repudiation": 0,
+                "informationDisclosure": 0,
+                "denialOfService": 0,
+                "elevationOfPrivilege": 1
+              }
             }
           },
           {
@@ -855,11 +950,13 @@
                 "text": "Database"
               },
               "topLine": {
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               },
               "bottomLine": {
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -955,13 +1052,33 @@
               "description": "A NoSQL database for efficient\nstorage and retrieval of large datasets.",
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "isALog": true,
               "isEncrypted": false,
               "isSigned": false,
               "storesCredentials": true,
               "storesInventory": false,
-              "threats": []
+              "threats": [
+                {
+                  "id": "44ef2364-beda-421c-b0ad-9e88f21bd878",
+                  "title": "SQL Injection Attacks",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Information disclosure",
+                  "description": "SQL injection attacks could expose sensitive user data.",
+                  "mitigation": "Reduce: Encrypt sensitive data stored in the database. Implement prepared statements and parameterized queries to prevent SQL injection.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 6,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "tampering": 0,
+                "repudiation": 0,
+                "informationDisclosure": 1,
+                "denialOfService": 0
+              }
             }
           },
           {
@@ -1355,7 +1472,7 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "supports with ",
+              "name": "Sends back \nservice responses ",
               "description": "",
               "outOfScope": false,
               "reasonOutOfScope": "",
@@ -1367,7 +1484,7 @@
               "threats": []
             },
             "labels": [
-              "supports with "
+              "Sends back \nservice responses "
             ],
             "id": "6ec2f706-6f7d-4e8f-9b07-d542c169ca10",
             "source": {
@@ -1378,16 +1495,16 @@
               "cell": "6ff01941-17db-4179-9678-971545931426",
               "port": "ac61efe1-3399-46e7-8e94-c94681be84fb"
             },
-            "tools": {
-              "items": [
-                "boundary",
-                "button-remove",
-                "vertices",
-                "source-arrowhead",
-                "target-arrowhead"
-              ],
-              "name": null
-            }
+            "vertices": [
+              {
+                "x": 520,
+                "y": 320
+              },
+              {
+                "x": 550,
+                "y": 340
+              }
+            ]
           },
           {
             "shape": "flow",
@@ -1409,7 +1526,7 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "Data Flow",
+              "name": "fetches\ndata results",
               "description": "",
               "outOfScope": false,
               "reasonOutOfScope": "",
@@ -1421,63 +1538,7 @@
               "threats": []
             },
             "labels": [
-              {
-                "attrs": {
-                  "label": {
-                    "text": "Data Flow"
-                  }
-                }
-              }
-            ],
-            "id": "e7a9ed6e-77de-4930-9544-2b306a2e38ca",
-            "source": {
-              "x": 723,
-              "y": 240
-            },
-            "target": {
-              "cell": "5dd18211-2e53-4afe-808e-e28e17b0f3ab",
-              "port": "ccc78429-4ec6-47e6-ab75-5da5cb8517d5"
-            }
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "Data Flow",
-              "description": "",
-              "outOfScope": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": []
-            },
-            "labels": [
-              {
-                "attrs": {
-                  "label": {
-                    "text": "Data Flow"
-                  }
-                }
-              }
+              "fetches\ndata results"
             ],
             "id": "267ff8ac-df01-46a4-a465-1eb10714a003",
             "source": {
@@ -1523,7 +1584,7 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "Data Flow",
+              "name": "inserts ingested \ndata for storage \n& processing",
               "description": "",
               "outOfScope": false,
               "reasonOutOfScope": "",
@@ -1535,13 +1596,7 @@
               "threats": []
             },
             "labels": [
-              {
-                "attrs": {
-                  "label": {
-                    "text": "Data Flow"
-                  }
-                }
-              }
+              "inserts ingested \ndata for storage \n& processing"
             ],
             "id": "e4f1faa5-40ab-4d2f-95c0-f061a7ff3019",
             "source": {
@@ -1579,7 +1634,7 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "Data Flow",
+              "name": "Makes\nquery calls",
               "description": "",
               "outOfScope": false,
               "reasonOutOfScope": "",
@@ -1591,7 +1646,7 @@
               "threats": []
             },
             "labels": [
-              "Data Flow"
+              "Makes\nquery calls"
             ],
             "id": "fe1906f7-943c-4093-a1be-f0f8c8e3b58d",
             "source": {
@@ -1601,6 +1656,10 @@
               "cell": "caff5844-e4f5-4c1b-8e4f-4a8e80a65c09"
             },
             "vertices": [
+              {
+                "x": 660,
+                "y": 480
+              },
               {
                 "x": 700,
                 "y": 535
@@ -1664,12 +1723,56 @@
                 "y": 460
               }
             ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "collect data from\nvarious devices",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "labels": [
+              "collect data from\nvarious devices"
+            ],
+            "id": "e7a9ed6e-77de-4930-9544-2b306a2e38ca",
+            "source": {
+              "cell": "a0d85d87-f35e-4bdf-afba-0e1fba7e5f8d",
+              "port": "0c3f99e7-b027-47b1-b678-30191ddedc81"
+            },
+            "target": {
+              "cell": "5dd18211-2e53-4afe-808e-e28e17b0f3ab",
+              "port": "ccc78429-4ec6-47e6-ab75-5da5cb8517d5"
+            }
           }
         ]
       }
     ],
     "diagramTop": 1,
     "reviewer": "",
-    "threatTop": 0
+    "threatTop": 7
   }
 }
