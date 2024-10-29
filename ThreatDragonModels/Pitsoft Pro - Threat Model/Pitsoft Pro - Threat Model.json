@@ -799,19 +799,12 @@
                 "denialOfService": 0,
                 "elevationOfPrivilege": 0
               }
-            },
-            "tools": {
-              "items": [
-                "boundary",
-                "button-remove"
-              ],
-              "name": null
             }
           },
           {
             "position": {
               "x": 580,
-              "y": 320
+              "y": 290
             },
             "size": {
               "width": 90,
@@ -1250,8 +1243,8 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "Sends\nresponses",
-              "description": "",
+              "name": "Sends\nrequests",
+              "description": "Users interact with the web application by sending requests to access different features or get information.",
               "outOfScope": false,
               "reasonOutOfScope": "",
               "hasOpenThreats": false,
@@ -1262,7 +1255,7 @@
               "threats": []
             },
             "labels": [
-              "Sends\nresponses"
+              "Sends\nrequests"
             ],
             "id": "1f54d56d-32cd-47a0-8c6b-fbd7bd6cc788",
             "source": {
@@ -1300,8 +1293,8 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "Sends\nrequests",
-              "description": "",
+              "name": "Sends\nresponses",
+              "description": "After processing, the web application returns responses to users, giving them the requested data.",
               "outOfScope": false,
               "reasonOutOfScope": "",
               "hasOpenThreats": false,
@@ -1312,7 +1305,7 @@
               "threats": []
             },
             "labels": [
-              "Sends\nrequests"
+              "Sends\nresponses"
             ],
             "id": "45f974bc-7fef-45a5-924d-0b2e861a428e",
             "source": {
@@ -1324,6 +1317,10 @@
               "port": "0c3f99e7-b027-47b1-b678-30191ddedc81"
             },
             "vertices": [
+              {
+                "x": 220,
+                "y": 370
+              },
               {
                 "x": 170,
                 "y": 350
@@ -1351,7 +1348,7 @@
             "data": {
               "type": "tm.Flow",
               "name": "Reads web\napp config",
-              "description": "",
+              "description": "The web app reads things such as, interface preferences and security settings from the web app configuration storage, to function.",
               "outOfScope": false,
               "reasonOutOfScope": "",
               "hasOpenThreats": false,
@@ -1372,7 +1369,13 @@
             "target": {
               "cell": "7a07bdfe-b148-4668-8e18-20e3754b2996",
               "port": "72706111-369b-4cc8-baa4-a28565f1f16c"
-            }
+            },
+            "vertices": [
+              {
+                "x": 250,
+                "y": 420
+              }
+            ]
           },
           {
             "shape": "flow",
@@ -1395,7 +1398,7 @@
             "data": {
               "type": "tm.Flow",
               "name": "posts login \ncredentials",
-              "description": "",
+              "description": "When users log in, their login credentials are posted from the web application to the authentication system to verify their identity.",
               "outOfScope": false,
               "reasonOutOfScope": "",
               "hasOpenThreats": false,
@@ -1444,7 +1447,7 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "Sends authen\ntoken",
+              "name": "DATA FLOW",
               "description": "",
               "outOfScope": false,
               "reasonOutOfScope": "",
@@ -1456,7 +1459,7 @@
               "threats": []
             },
             "labels": [
-              "Sends authen\ntoken"
+              "DATA FLOW"
             ],
             "id": "881c0fe8-eaf7-4e36-92ab-efefd966ac97",
             "source": {
@@ -1712,8 +1715,8 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "verifies then\nvalidates access",
-              "description": "",
+              "name": "Sends authen\ntoken",
+              "description": "After successful authentication, the authentication system sends an authorization token to the API gateway, which allows the user to access the system.",
               "outOfScope": false,
               "reasonOutOfScope": "",
               "hasOpenThreats": false,
@@ -1724,7 +1727,7 @@
               "threats": []
             },
             "labels": [
-              "verifies then\nvalidates access"
+              "Sends authen\ntoken"
             ],
             "id": "93291ecd-3e5d-424d-ad15-cb7109584d23",
             "source": {
@@ -1793,6 +1796,56 @@
               "cell": "5dd18211-2e53-4afe-808e-e28e17b0f3ab",
               "port": "ccc78429-4ec6-47e6-ab75-5da5cb8517d5"
             }
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Verifies then\nvalidates access",
+              "description": "The API gateway verifies the authorisation token and validates the user’s access level, ensuring they have permission to perform requested actions.",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "labels": [
+              "Verifies then\nvalidates access"
+            ],
+            "id": "bfee9462-a97d-42b9-9f37-7d9bf41f4a95",
+            "source": {
+              "cell": "6ff01941-17db-4179-9678-971545931426",
+              "port": "ac61efe1-3399-46e7-8e94-c94681be84fb"
+            },
+            "target": {
+              "cell": "5b25212e-c51d-4ab3-bb34-f6a3df71e732",
+              "port": "ccc78429-4ec6-47e6-ab75-5da5cb8517d5"
+            },
+            "vertices": [
+              {
+                "x": 560,
+                "y": 380
+              }
+            ]
           }
         ]
       }
