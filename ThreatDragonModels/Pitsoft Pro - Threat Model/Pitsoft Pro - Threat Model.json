@@ -1397,7 +1397,7 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "returns\nauthen response",
+              "name": "Returns\nauthen response",
               "description": "Once the user's login credentials are verified, the authentication system sends an authentication response back to the web application. This response confirms the user's identity and grants or denies access.",
               "outOfScope": false,
               "reasonOutOfScope": "",
@@ -1409,7 +1409,7 @@
               "threats": []
             },
             "labels": [
-              "returns\nauthen response"
+              "Returns\nauthen response"
             ],
             "id": "881c0fe8-eaf7-4e36-92ab-efefd966ac97",
             "source": {
@@ -1505,7 +1505,7 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "fetches\ndata results",
+              "name": "Fetches\ndata results",
               "description": "The database returns data results to the API gateway in response to the query calls, allowing the application to continue processing and deliver the necessary information to the user.",
               "outOfScope": false,
               "reasonOutOfScope": "",
@@ -1517,7 +1517,7 @@
               "threats": []
             },
             "labels": [
-              "fetches\ndata results"
+              "Fetches\ndata results"
             ],
             "id": "267ff8ac-df01-46a4-a465-1eb10714a003",
             "source": {
@@ -1563,7 +1563,7 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "inserts ingested \ndata for storage \n& processing",
+              "name": "Inserts ingested \ndata for storage \n& processing",
               "description": "Data ingestion processes and inserts  data into the database for long-term storage and further analysis.",
               "outOfScope": false,
               "reasonOutOfScope": "",
@@ -1575,7 +1575,7 @@
               "threats": []
             },
             "labels": [
-              "inserts ingested \ndata for storage \n& processing"
+              "Inserts ingested \ndata for storage \n& processing"
             ],
             "id": "e4f1faa5-40ab-4d2f-95c0-f061a7ff3019",
             "source": {
@@ -1723,7 +1723,7 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "collect data from\nvarious devices",
+              "name": "Collect data from\nvarious devices",
               "description": "The data ingestion process collects data from various external sources.",
               "outOfScope": false,
               "reasonOutOfScope": "",
@@ -1735,7 +1735,7 @@
               "threats": []
             },
             "labels": [
-              "collect data from\nvarious devices"
+              "Collect data from\nvarious devices"
             ],
             "id": "e7a9ed6e-77de-4930-9544-2b306a2e38ca",
             "source": {
@@ -1817,7 +1817,7 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "posts login \ncredentials",
+              "name": "Posts login \ncredentials",
               "description": "When users log in, their login credentials are posted from the web application to the authentication system to verify their identity.",
               "outOfScope": false,
               "reasonOutOfScope": "",
@@ -1829,7 +1829,7 @@
               "threats": []
             },
             "labels": [
-              "posts login \ncredentials"
+              "Posts login \ncredentials"
             ],
             "id": "bbe5937d-649b-4db6-8732-824de55d40b8",
             "source": {
