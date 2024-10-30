@@ -1397,8 +1397,8 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "posts login \ncredentials",
-              "description": "When users log in, their login credentials are posted from the web application to the authentication system to verify their identity.",
+              "name": "returns\nauthen response",
+              "description": "Once the user's login credentials are verified, the authentication system sends an authentication response back to the web application. This response confirms the user's identity and grants or denies access.",
               "outOfScope": false,
               "reasonOutOfScope": "",
               "hasOpenThreats": false,
@@ -1409,57 +1409,7 @@
               "threats": []
             },
             "labels": [
-              "posts login \ncredentials"
-            ],
-            "id": "bbe5937d-649b-4db6-8732-824de55d40b8",
-            "source": {
-              "cell": "7a07bdfe-b148-4668-8e18-20e3754b2996",
-              "port": "c661b129-4ef2-4f0e-8d39-5ab00f3e424a"
-            },
-            "target": {
-              "cell": "5b25212e-c51d-4ab3-bb34-f6a3df71e732",
-              "port": "ac61efe1-3399-46e7-8e94-c94681be84fb"
-            },
-            "vertices": [
-              {
-                "x": 370,
-                "y": 470
-              }
-            ]
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "DATA FLOW",
-              "description": "",
-              "outOfScope": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": []
-            },
-            "labels": [
-              "DATA FLOW"
+              "returns\nauthen response"
             ],
             "id": "881c0fe8-eaf7-4e36-92ab-efefd966ac97",
             "source": {
@@ -1472,12 +1422,12 @@
             },
             "vertices": [
               {
-                "x": 466.25,
-                "y": 420
+                "x": 446.25,
+                "y": 400
               },
               {
-                "x": 430,
-                "y": 400
+                "x": 410,
+                "y": 380
               }
             ]
           },
@@ -1502,7 +1452,7 @@
             "data": {
               "type": "tm.Flow",
               "name": "Sends back \nservice responses ",
-              "description": "",
+              "description": "The cloud infrastructure sends back responses to the API gateway, providing it with necessary data or processing capabilities it needs to fulfil user requests.",
               "outOfScope": false,
               "reasonOutOfScope": "",
               "hasOpenThreats": false,
@@ -1556,7 +1506,7 @@
             "data": {
               "type": "tm.Flow",
               "name": "fetches\ndata results",
-              "description": "",
+              "description": "The database returns data results to the API gateway in response to the query calls, allowing the application to continue processing and deliver the necessary information to the user.",
               "outOfScope": false,
               "reasonOutOfScope": "",
               "hasOpenThreats": false,
@@ -1614,7 +1564,7 @@
             "data": {
               "type": "tm.Flow",
               "name": "inserts ingested \ndata for storage \n& processing",
-              "description": "",
+              "description": "Data ingestion processes and inserts  data into the database for long-term storage and further analysis.",
               "outOfScope": false,
               "reasonOutOfScope": "",
               "hasOpenThreats": false,
@@ -1664,7 +1614,7 @@
             "data": {
               "type": "tm.Flow",
               "name": "Makes\nquery calls",
-              "description": "",
+              "description": "The API gateway makes query calls to the database to retrieve or update information.",
               "outOfScope": false,
               "reasonOutOfScope": "",
               "hasOpenThreats": false,
@@ -1774,7 +1724,7 @@
             "data": {
               "type": "tm.Flow",
               "name": "collect data from\nvarious devices",
-              "description": "",
+              "description": "The data ingestion process collects data from various external sources.",
               "outOfScope": false,
               "reasonOutOfScope": "",
               "hasOpenThreats": false,
@@ -1844,6 +1794,56 @@
               {
                 "x": 560,
                 "y": 380
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "posts login \ncredentials",
+              "description": "When users log in, their login credentials are posted from the web application to the authentication system to verify their identity.",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "labels": [
+              "posts login \ncredentials"
+            ],
+            "id": "bbe5937d-649b-4db6-8732-824de55d40b8",
+            "source": {
+              "cell": "7a07bdfe-b148-4668-8e18-20e3754b2996",
+              "port": "c661b129-4ef2-4f0e-8d39-5ab00f3e424a"
+            },
+            "target": {
+              "cell": "5b25212e-c51d-4ab3-bb34-f6a3df71e732",
+              "port": "ac61efe1-3399-46e7-8e94-c94681be84fb"
+            },
+            "vertices": [
+              {
+                "x": 370,
+                "y": 470
               }
             ]
           }
