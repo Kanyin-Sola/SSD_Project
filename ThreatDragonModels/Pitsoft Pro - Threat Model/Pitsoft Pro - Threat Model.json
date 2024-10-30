@@ -1,9 +1,9 @@
 {
-  "version": "2.2.0",
+  "version": "v2.3.0-RC1",
   "summary": {
     "title": "Pitsoft Pro - Threat Model",
     "owner": "Kanyinsola Fakehinde",
-    "description": "",
+    "description": "PitSoft Pro is a web-based application designed to offer real-time data analytics and AI-driven insights to help professional motorsports teams optimise their performance and gain a competitive edge. It allows users to interact with a web application to access services, retrieve information, and manage data securely. The system includes several key components such as an API Gateway, Authentication System, Data Ingestion processes, and a Database, all functioning within distinct trust boundaries to ensure data integrity and security.",
     "id": 0
   },
   "detail": {
@@ -1945,7 +1945,8 @@
               }
             ]
           }
-        ]
+        ],
+        "description": "The threat model aims to identify and address potential security risks within the PitSoft Pro system, using the STRIDE framework. By examining each component and data flow through this model, PitSoft Pro aims to establish a robust security foundation, focusing on preventive measures and controlled risk responses to secure the platform and maintain user confidence."
       }
     ],
     "diagramTop": 1,
