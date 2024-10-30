@@ -922,7 +922,7 @@
                   "id": "fae2f208-b03e-4630-99da-1e63138363f9",
                   "title": "Unauthorised Access",
                   "status": "Open",
-                  "severity": "Medium",
+                  "severity": "High",
                   "type": "Elevation of privilege",
                   "description": "Exploiting vulnerabilities in the API gateway to gain unauthorised higher-level access.",
                   "mitigation": "Reduce: Implement least privilege principles to grant users only the necessary permissions. Regularly review and update access controls.",
@@ -951,8 +951,15 @@
                 "repudiation": 0,
                 "informationDisclosure": 0,
                 "denialOfService": 0,
-                "elevationOfPrivilege": 1
+                "elevationOfPrivilege": 2
               }
+            },
+            "tools": {
+              "items": [
+                "boundary",
+                "button-remove"
+              ],
+              "name": null
             }
           },
           {
