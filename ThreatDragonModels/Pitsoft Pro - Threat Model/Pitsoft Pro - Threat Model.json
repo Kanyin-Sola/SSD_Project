@@ -486,8 +486,8 @@
                   "id": "30ee6619-7b77-498e-8164-f55e38415c45",
                   "title": "Malicious Users",
                   "status": "Open",
-                  "severity": "Medium",
-                  "type": "Spoofing",
+                  "severity": "Low",
+                  "type": "Denial of service",
                   "description": "Malicious users could flood the system with requests, causing service disruption.",
                   "mitigation": "Accept: Implement rate-limiting and server monitoring, but accept that some level of service disruption may be inevitable in the event of a large-scale attack.",
                   "modelType": "STRIDE",
@@ -501,7 +501,7 @@
                 "tampering": 0,
                 "repudiation": 0,
                 "informationDisclosure": 0,
-                "denialOfService": 0,
+                "denialOfService": 1,
                 "elevationOfPrivilege": 0
               }
             }
@@ -781,7 +781,7 @@
                   "id": "d7c429c0-4f6b-4429-9fef-87cfe74ad590",
                   "title": "Man-in-the-middle Attack",
                   "status": "Open",
-                  "severity": "Medium",
+                  "severity": "High",
                   "type": "Spoofing",
                   "description": "Man-in-the-middle attack intercepts and modifies login credentials during authentication.\n\n",
                   "mitigation": "Avoid: Implement end-to-end encryption during login processes to prevent interception of credentials.",
@@ -792,7 +792,7 @@
                 }
               ],
               "threatFrequency": {
-                "spoofing": 1,
+                "spoofing": 2,
                 "tampering": 0,
                 "repudiation": 0,
                 "informationDisclosure": 1,
@@ -935,7 +935,7 @@
                   "id": "0a4081d0-f5e5-48ed-a030-da568398e246",
                   "title": "User Impersonation",
                   "status": "Open",
-                  "severity": "Medium",
+                  "severity": "Low",
                   "type": "Spoofing",
                   "description": "An attacker impersonates a legitimate user to send malicious requests to the API gateway.",
                   "mitigation": "Reduce: Implement strict multi-factor authentication (MFA) for users, requiring at least two methods, e.g., password and biometrics.",
@@ -946,7 +946,7 @@
                 }
               ],
               "threatFrequency": {
-                "spoofing": 1,
+                "spoofing": 2,
                 "tampering": 0,
                 "repudiation": 0,
                 "informationDisclosure": 0,
@@ -1089,7 +1089,7 @@
                   "id": "44ef2364-beda-421c-b0ad-9e88f21bd878",
                   "title": "SQL Injection Attacks",
                   "status": "Open",
-                  "severity": "Medium",
+                  "severity": "High",
                   "type": "Information disclosure",
                   "description": "SQL injection attacks could expose sensitive user data.",
                   "mitigation": "Reduce: Encrypt sensitive data stored in the database. Implement prepared statements and parameterized queries to prevent SQL injection.",
@@ -1102,7 +1102,7 @@
               "threatFrequency": {
                 "tampering": 0,
                 "repudiation": 0,
-                "informationDisclosure": 1,
+                "informationDisclosure": 2,
                 "denialOfService": 0
               }
             }
