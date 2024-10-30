@@ -135,8 +135,8 @@
           },
           {
             "position": {
-              "x": 410,
-              "y": 200
+              "x": 400,
+              "y": 210
             },
             "size": {
               "width": 112.5,
@@ -508,8 +508,8 @@
           },
           {
             "position": {
-              "x": 782.5,
-              "y": 290
+              "x": 822.5,
+              "y": 340
             },
             "size": {
               "width": 90,
@@ -649,8 +649,8 @@
           },
           {
             "position": {
-              "x": 410,
-              "y": 460
+              "x": 470,
+              "y": 525
             },
             "size": {
               "width": 90,
@@ -803,8 +803,8 @@
           },
           {
             "position": {
-              "x": 580,
-              "y": 290
+              "x": 620,
+              "y": 340
             },
             "size": {
               "width": 90,
@@ -953,19 +953,12 @@
                 "denialOfService": 0,
                 "elevationOfPrivilege": 2
               }
-            },
-            "tools": {
-              "items": [
-                "boundary",
-                "button-remove"
-              ],
-              "name": null
             }
           },
           {
             "position": {
-              "x": 782.5,
-              "y": 505
+              "x": 822.5,
+              "y": 555
             },
             "size": {
               "width": 120,
@@ -1404,114 +1397,6 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "Returns\nauthen response",
-              "description": "Once the user's login credentials are verified, the authentication system sends an authentication response back to the web application. This response confirms the user's identity and grants or denies access.",
-              "outOfScope": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": []
-            },
-            "labels": [
-              "Returns\nauthen response"
-            ],
-            "id": "881c0fe8-eaf7-4e36-92ab-efefd966ac97",
-            "source": {
-              "cell": "5b25212e-c51d-4ab3-bb34-f6a3df71e732",
-              "port": "ccc78429-4ec6-47e6-ab75-5da5cb8517d5"
-            },
-            "target": {
-              "cell": "7a07bdfe-b148-4668-8e18-20e3754b2996",
-              "port": "c661b129-4ef2-4f0e-8d39-5ab00f3e424a"
-            },
-            "vertices": [
-              {
-                "x": 446.25,
-                "y": 400
-              },
-              {
-                "x": 410,
-                "y": 380
-              }
-            ]
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "Sends back \nservice responses ",
-              "description": "The cloud infrastructure sends back responses to the API gateway, providing it with necessary data or processing capabilities it needs to fulfil user requests.",
-              "outOfScope": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": []
-            },
-            "labels": [
-              "Sends back \nservice responses "
-            ],
-            "id": "6ec2f706-6f7d-4e8f-9b07-d542c169ca10",
-            "source": {
-              "x": 470,
-              "y": 260
-            },
-            "target": {
-              "cell": "6ff01941-17db-4179-9678-971545931426",
-              "port": "ac61efe1-3399-46e7-8e94-c94681be84fb"
-            },
-            "vertices": [
-              {
-                "x": 520,
-                "y": 320
-              },
-              {
-                "x": 550,
-                "y": 340
-              }
-            ]
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
               "name": "Fetches\ndata results",
               "description": "The database returns data results to the API gateway in response to the query calls, allowing the application to continue processing and deliver the necessary information to the user.",
               "outOfScope": false,
@@ -1537,16 +1422,16 @@
             },
             "vertices": [
               {
-                "x": 790,
-                "y": 470
+                "x": 830,
+                "y": 520
               },
               {
-                "x": 750,
-                "y": 440
+                "x": 800,
+                "y": 480
               },
               {
-                "x": 690,
-                "y": 420
+                "x": 770,
+                "y": 450
               }
             ]
           },
@@ -1595,8 +1480,8 @@
             },
             "vertices": [
               {
-                "x": 970,
-                "y": 480
+                "x": 1010,
+                "y": 530
               }
             ]
           },
@@ -1643,12 +1528,12 @@
             },
             "vertices": [
               {
-                "x": 660,
-                "y": 480
+                "x": 740,
+                "y": 580
               },
               {
-                "x": 700,
-                "y": 535
+                "x": 780,
+                "y": 635
               }
             ]
           },
@@ -1697,16 +1582,16 @@
             },
             "vertices": [
               {
-                "x": 550,
-                "y": 490
+                "x": 590,
+                "y": 540
               },
               {
-                "x": 570,
-                "y": 480
+                "x": 610,
+                "y": 530
               },
               {
-                "x": 605,
-                "y": 460
+                "x": 645,
+                "y": 510
               }
             ]
           },
@@ -1799,8 +1684,8 @@
             },
             "vertices": [
               {
-                "x": 560,
-                "y": 380
+                "x": 600,
+                "y": 430
               }
             ]
           },
@@ -1849,8 +1734,214 @@
             },
             "vertices": [
               {
-                "x": 370,
+                "x": 360,
+                "y": 520
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Sends back \nservice responses ",
+              "description": "The cloud infrastructure sends back responses to the API gateway, providing it with necessary data or processing capabilities it needs to fulfil user requests.",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "labels": [
+              "Sends back \nservice responses "
+            ],
+            "id": "6ec2f706-6f7d-4e8f-9b07-d542c169ca10",
+            "source": {
+              "cell": "312882e3-1ab7-4aae-8e83-07c94bb699bf",
+              "port": "0c3f99e7-b027-47b1-b678-30191ddedc81"
+            },
+            "target": {
+              "cell": "6ff01941-17db-4179-9678-971545931426",
+              "port": "ac61efe1-3399-46e7-8e94-c94681be84fb"
+            },
+            "vertices": [
+              {
+                "x": 560,
+                "y": 370
+              },
+              {
+                "x": 590,
+                "y": 390
+              }
+            ]
+          },
+          {
+            "shape": "trust-boundary-curve",
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Boundary",
+              "name": "Trust Boundary",
+              "description": "",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false
+            },
+            "labels": [
+              {
+                "attrs": {
+                  "label": {
+                    "text": "Trust Boundary"
+                  }
+                }
+              }
+            ],
+            "id": "53d8fc0d-24ca-492e-8c9f-86f0470ca9e2",
+            "source": {
+              "x": 42,
+              "y": 330
+            },
+            "target": {
+              "x": 890,
+              "y": 200
+            },
+            "vertices": [
+              {
+                "x": 470,
+                "y": 300
+              }
+            ]
+          },
+          {
+            "shape": "trust-boundary-curve",
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Boundary",
+              "name": "Trust \nBoundary",
+              "description": "",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false
+            },
+            "labels": [
+              "Trust \nBoundary"
+            ],
+            "id": "94b9b22b-d38d-433d-86b2-b860c23ea9e9",
+            "source": {
+              "x": 690,
+              "y": 310
+            },
+            "target": {
+              "x": 380,
+              "y": 595
+            },
+            "vertices": [
+              {
+                "x": 470,
+                "y": 460
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Returns\nauthen response",
+              "description": "Once the user's login credentials are verified, the authentication system sends an authentication response back to the web application. This response confirms the user's identity and grants or denies access.",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "labels": [
+              "Returns\nauthen response"
+            ],
+            "id": "65b1b7e1-5f2a-4195-b58e-b5d7b6877365",
+            "source": {
+              "cell": "5b25212e-c51d-4ab3-bb34-f6a3df71e732",
+              "port": "ccc78429-4ec6-47e6-ab75-5da5cb8517d5"
+            },
+            "target": {
+              "cell": "7a07bdfe-b148-4668-8e18-20e3754b2996",
+              "port": "c661b129-4ef2-4f0e-8d39-5ab00f3e424a"
+            },
+            "vertices": [
+              {
+                "x": 420,
                 "y": 470
+              }
+            ]
+          },
+          {
+            "shape": "trust-boundary-curve",
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Boundary",
+              "name": "Trust \nBoundary",
+              "description": "",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false
+            },
+            "labels": [
+              "Trust \nBoundary"
+            ],
+            "id": "188d0b0b-a77d-4358-a15c-9c9a9cb0a34e",
+            "source": {
+              "x": 870,
+              "y": 490
+            },
+            "target": {
+              "x": 753,
+              "y": 695
+            },
+            "vertices": [
+              {
+                "x": 810,
+                "y": 560
               }
             ]
           }
