@@ -501,9 +501,16 @@
                 "tampering": 0,
                 "repudiation": 0,
                 "informationDisclosure": 0,
-                "denialOfService": 2,
+                "denialOfService": 3,
                 "elevationOfPrivilege": 0
               }
+            },
+            "tools": {
+              "items": [
+                "boundary",
+                "button-remove"
+              ],
+              "name": null
             }
           },
           {
@@ -627,7 +634,7 @@
                   "id": "f8d911bd-dd8d-4da5-b685-d7c528e65ae9",
                   "title": "Malicious Data Ingested",
                   "status": "Mitigated",
-                  "severity": "Medium",
+                  "severity": "Low",
                   "type": "Tampering",
                   "description": "Data being ingested into the database could be tampered with, resulting in incorrect or malicious data.",
                   "mitigation": "Reduce: Implement data validation to detect and prevent tampered data. Monitor devices for anomalies and regularly update software and hardware to reduce vulnerabilities.",
@@ -639,7 +646,7 @@
               ],
               "threatFrequency": {
                 "spoofing": 0,
-                "tampering": 2,
+                "tampering": 3,
                 "repudiation": 0,
                 "informationDisclosure": 0,
                 "denialOfService": 0,
@@ -775,7 +782,7 @@
                   "modelType": "STRIDE",
                   "new": false,
                   "number": 5,
-                  "score": ""
+                  "score": "10/25"
                 },
                 {
                   "id": "d7c429c0-4f6b-4429-9fef-87cfe74ad590",
@@ -788,14 +795,14 @@
                   "modelType": "STRIDE",
                   "new": false,
                   "number": 9,
-                  "score": ""
+                  "score": "25/25"
                 }
               ],
               "threatFrequency": {
-                "spoofing": 2,
+                "spoofing": 4,
                 "tampering": 0,
                 "repudiation": 0,
-                "informationDisclosure": 1,
+                "informationDisclosure": 3,
                 "denialOfService": 0,
                 "elevationOfPrivilege": 0
               }
@@ -922,7 +929,7 @@
                   "id": "fae2f208-b03e-4630-99da-1e63138363f9",
                   "title": "Unauthorised Access",
                   "status": "Open",
-                  "severity": "High",
+                  "severity": "Medium",
                   "type": "Elevation of privilege",
                   "description": "Exploiting vulnerabilities in the API gateway to gain unauthorised higher-level access.",
                   "mitigation": "Reduce: Implement least privilege principles to grant users only the necessary permissions. Regularly review and update access controls.",
@@ -935,7 +942,7 @@
                   "id": "0a4081d0-f5e5-48ed-a030-da568398e246",
                   "title": "User Impersonation",
                   "status": "Mitigated",
-                  "severity": "Low",
+                  "severity": "Medium",
                   "type": "Spoofing",
                   "description": "An attacker impersonates a legitimate user to send malicious requests to the API gateway.",
                   "mitigation": "Reduce: Implement strict multi-factor authentication (MFA) for users, requiring at least two methods, e.g., password and biometrics.",
@@ -946,12 +953,12 @@
                 }
               ],
               "threatFrequency": {
-                "spoofing": 3,
+                "spoofing": 4,
                 "tampering": 0,
                 "repudiation": 0,
                 "informationDisclosure": 0,
                 "denialOfService": 0,
-                "elevationOfPrivilege": 3
+                "elevationOfPrivilege": 4
               }
             }
           },
@@ -969,13 +976,11 @@
                 "text": "Database"
               },
               "topLine": {
-                "stroke": "red",
-                "strokeWidth": 2.5,
+                "strokeWidth": 1.5,
                 "strokeDasharray": null
               },
               "bottomLine": {
-                "stroke": "red",
-                "strokeWidth": 2.5,
+                "strokeWidth": 1.5,
                 "strokeDasharray": null
               }
             },
@@ -1071,7 +1076,7 @@
               "description": "A NoSQL database for efficient\nstorage and retrieval of large datasets.",
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": true,
+              "hasOpenThreats": false,
               "isALog": true,
               "isEncrypted": false,
               "isSigned": false,
@@ -1081,30 +1086,23 @@
                 {
                   "id": "44ef2364-beda-421c-b0ad-9e88f21bd878",
                   "title": "SQL Injection Attacks",
-                  "status": "Open",
+                  "status": "Mitigated",
                   "severity": "High",
                   "type": "Information disclosure",
                   "description": "SQL injection attacks could expose sensitive user data.",
-                  "mitigation": "Reduce: Encrypt sensitive data stored in the database. Implement prepared statements and parameterized queries to prevent SQL injection.",
+                  "mitigation": "Reduce: Review and strengthen encryption of sensitive data stored in the database. Implement prepared statements and parameterized queries to prevent SQL injection.",
                   "modelType": "STRIDE",
                   "new": false,
                   "number": 6,
-                  "score": ""
+                  "score": "25/25"
                 }
               ],
               "threatFrequency": {
                 "tampering": 0,
                 "repudiation": 0,
-                "informationDisclosure": 2,
+                "informationDisclosure": 3,
                 "denialOfService": 0
               }
-            },
-            "tools": {
-              "items": [
-                "boundary",
-                "button-remove"
-              ],
-              "name": null
             }
           },
           {
