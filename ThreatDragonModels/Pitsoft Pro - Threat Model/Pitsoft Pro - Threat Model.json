@@ -1,5 +1,5 @@
 {
-  "version": "v2.3.0-RC1",
+  "version": "2.2.0",
   "summary": {
     "title": "Pitsoft Pro - Threat Model",
     "owner": "Kanyinsola Fakehinde",
@@ -493,7 +493,7 @@
                   "modelType": "STRIDE",
                   "new": false,
                   "number": 4,
-                  "score": ""
+                  "score": "4/25"
                 }
               ],
               "threatFrequency": {
@@ -501,7 +501,7 @@
                 "tampering": 0,
                 "repudiation": 0,
                 "informationDisclosure": 0,
-                "denialOfService": 1,
+                "denialOfService": 2,
                 "elevationOfPrivilege": 0
               }
             }
@@ -520,8 +520,8 @@
                 "text": "Data\nIngestion"
               },
               "body": {
-                "stroke": "red",
-                "strokeWidth": 2.5,
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
                 "strokeDasharray": null
               }
             },
@@ -617,7 +617,7 @@
               "description": "Ingests data from various sources, like sensors, then transforms it as needed, and stores it in the database",
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": true,
+              "hasOpenThreats": false,
               "handlesCardPayment": false,
               "handlesGoodsOrServices": false,
               "isWebApplication": false,
@@ -626,7 +626,7 @@
                 {
                   "id": "f8d911bd-dd8d-4da5-b685-d7c528e65ae9",
                   "title": "Malicious Data Ingested",
-                  "status": "Open",
+                  "status": "Mitigated",
                   "severity": "Medium",
                   "type": "Tampering",
                   "description": "Data being ingested into the database could be tampered with, resulting in incorrect or malicious data.",
@@ -634,12 +634,12 @@
                   "modelType": "STRIDE",
                   "new": false,
                   "number": 7,
-                  "score": ""
+                  "score": "8/25"
                 }
               ],
               "threatFrequency": {
                 "spoofing": 0,
-                "tampering": 1,
+                "tampering": 2,
                 "repudiation": 0,
                 "informationDisclosure": 0,
                 "denialOfService": 0,
@@ -929,12 +929,12 @@
                   "modelType": "STRIDE",
                   "new": false,
                   "number": 1,
-                  "score": ""
+                  "score": "10/25"
                 },
                 {
                   "id": "0a4081d0-f5e5-48ed-a030-da568398e246",
                   "title": "User Impersonation",
-                  "status": "Open",
+                  "status": "Mitigated",
                   "severity": "Low",
                   "type": "Spoofing",
                   "description": "An attacker impersonates a legitimate user to send malicious requests to the API gateway.",
@@ -942,16 +942,16 @@
                   "modelType": "STRIDE",
                   "new": false,
                   "number": 8,
-                  "score": ""
+                  "score": "10/25"
                 }
               ],
               "threatFrequency": {
-                "spoofing": 2,
+                "spoofing": 3,
                 "tampering": 0,
                 "repudiation": 0,
                 "informationDisclosure": 0,
                 "denialOfService": 0,
-                "elevationOfPrivilege": 2
+                "elevationOfPrivilege": 3
               }
             }
           },
@@ -1098,6 +1098,13 @@
                 "informationDisclosure": 2,
                 "denialOfService": 0
               }
+            },
+            "tools": {
+              "items": [
+                "boundary",
+                "button-remove"
+              ],
+              "name": null
             }
           },
           {
