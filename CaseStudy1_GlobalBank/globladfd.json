@@ -1,0 +1,1210 @@
+{
+  "version": "2.2.0",
+  "summary": {
+    "title": "SecureNet by GlobalBank - DFD with Threat Analysis",
+    "owner": "Athena Parsa Kayin ",
+    "description": "SecureNet by GlobalBank is a secure digital banking platform with a three-tier architecture. It enables clients to manage accounts, perform transactions, and monitor activities through a web/mobile interface. The system includes a Presentation Layer for user interaction, an Application Layer for authentication and transaction processing, and a Data Layer for secure data storage. Security features like Multi-Factor Authentication, encryption, and real-time monitoring protect against unauthorized access and fraud",
+    "id": 0
+  },
+  "detail": {
+    "contributors": [],
+    "diagrams": [
+      {
+        "id": 0,
+        "title": "New STRIDE diagram",
+        "diagramType": "STRIDE",
+        "placeholder": "New STRIDE diagram description",
+        "thumbnail": "./public/content/images/thumbnail.stride.jpg",
+        "version": "2.2.0",
+        "cells": [
+          {
+            "position": {
+              "x": 19.999999999999943,
+              "y": 19.999999999999943
+            },
+            "size": {
+              "width": 910,
+              "height": 240
+            },
+            "shape": "trust-boundary-box",
+            "attrs": {
+              "headerText": {
+                "text": "Client to Application Boundary"
+              }
+            },
+            "id": "8f045ca7-cb5d-44a2-ae71-03ff979d7e09",
+            "zIndex": -1,
+            "data": {
+              "type": "tm.BoundaryBox",
+              "name": "Client to Application Boundary",
+              "description": "",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false
+            }
+          },
+          {
+            "position": {
+              "x": 960,
+              "y": 220
+            },
+            "size": {
+              "width": 520,
+              "height": 580
+            },
+            "shape": "trust-boundary-box",
+            "attrs": {
+              "headerText": {
+                "text": " Application layer Boundary"
+              }
+            },
+            "id": "4015d10f-e085-4d7e-8916-11c15758b1ad",
+            "zIndex": -1,
+            "data": {
+              "type": "tm.BoundaryBox",
+              "name": " Application layer Boundary",
+              "description": "",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false
+            }
+          },
+          {
+            "position": {
+              "x": 1100,
+              "y": 10.000000000000199
+            },
+            "size": {
+              "width": 620,
+              "height": 200
+            },
+            "shape": "trust-boundary-box",
+            "attrs": {
+              "headerText": {
+                "text": "Data layer Boundary"
+              }
+            },
+            "id": "654697f2-dd64-4850-9019-4ff3e40c6a29",
+            "zIndex": -1,
+            "data": {
+              "type": "tm.BoundaryBox",
+              "name": "Data layer Boundary",
+              "description": "",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false
+            }
+          },
+          {
+            "position": {
+              "x": 52.99999999999994,
+              "y": 94.99999999999991
+            },
+            "size": {
+              "width": 260,
+              "height": 70
+            },
+            "attrs": {
+              "text": {
+                "text": "Users Individual / Corporate Clients"
+              },
+              "body": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "actor",
+            "id": "c4a72f48-9fa1-45c7-8a41-dba7d051e6aa",
+            "zIndex": 1,
+            "data": {
+              "type": "tm.Actor",
+              "name": "Users Individual / Corporate Clients",
+              "description": "This model focuses on the SecureNet banking platform, covering individual and corporate user interactions and the system's secure data flows/Business clients with access to advanced banking features",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "providesAuthentication": false,
+              "threats": []
+            }
+          },
+          {
+            "position": {
+              "x": 410,
+              "y": 70
+            },
+            "size": {
+              "width": 150,
+              "height": 140
+            },
+            "attrs": {
+              "text": {
+                "text": "SecureNET "
+              },
+              "body": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "process",
+            "id": "5d9f7155-0420-4007-9232-9b29a89f3969",
+            "zIndex": 2,
+            "data": {
+              "type": "tm.Process",
+              "name": "SecureNET ",
+              "description": "Main user interface for account management and transactions",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "handlesCardPayment": false,
+              "handlesGoodsOrServices": false,
+              "isWebApplication": true,
+              "privilegeLevel": "",
+              "threats": []
+            }
+          },
+          {
+            "position": {
+              "x": 680,
+              "y": 150
+            },
+            "size": {
+              "width": 110,
+              "height": 90
+            },
+            "attrs": {
+              "text": {
+                "text": "Secure Login "
+              },
+              "body": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "process",
+            "id": "8a404883-41dc-4217-98c8-eff063b6983b",
+            "zIndex": 3,
+            "data": {
+              "type": "tm.Process",
+              "name": "Secure Login ",
+              "description": "Implements Multi-Factor Authentication\n(MFA) to verify user identify, Providing\nsecure access control for all user actions",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "handlesCardPayment": false,
+              "handlesGoodsOrServices": false,
+              "isWebApplication": false,
+              "privilegeLevel": "",
+              "threats": [
+                {
+                  "id": "6eb105cf-fc5b-4afd-84b9-e4c3cc68c481",
+                  "title": "Spoofing ",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Spoofing",
+                  "description": "An attacker may attempt to impersonate a legitimate user by leveraging stolen credentials, phishing attacks, or brute-force techniques. This spoofing could result in unauthorized access to user accounts, leading to potential financial fraud, unauthorized transactions, and data breaches",
+                  "mitigation": "Multi-Factor Authentication (MFA): Enforce MFA for an additional layer of security beyond passwords.\nStrong Password Policies: Require complex passwords and enforce regular password updates.\nAccount Lockout Policies: Lock accounts after a certain number of failed login attempts to prevent brute-force attacks.\nSession Monitoring: Implement session monitoring to detect and alert unusual access patterns.\n\nCategory: Reduce ",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 2,
+                  "score": "8"
+                }
+              ]
+            }
+          },
+          {
+            "position": {
+              "x": 920,
+              "y": 520
+            },
+            "size": {
+              "width": 190,
+              "height": 100
+            },
+            "attrs": {
+              "text": {
+                "text": "Authentication \nSystem "
+              },
+              "body": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "process",
+            "id": "b16d4ef7-6df1-4f5a-8a59-1b57bcd773d8",
+            "zIndex": 4,
+            "data": {
+              "type": "tm.Process",
+              "name": "Authentication \nSystem ",
+              "description": "Authentication & Security Module",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "handlesCardPayment": false,
+              "handlesGoodsOrServices": false,
+              "isWebApplication": false,
+              "privilegeLevel": "",
+              "threats": [
+                {
+                  "id": "e75f54c0-8afd-48ce-aff4-4a5b57085d5f",
+                  "title": "Tampering",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Tampering",
+                  "description": "An attacker might attempt to tamper with the authentication system by altering access control parameters, such as Multi-Factor Authentication (MFA) requirements or user privileges. This could allow unauthorized access to restricted parts of the system, posing a serious security risk",
+                  "mitigation": "Cryptographic Integrity Checks: Use HMAC (Hash-based Message Authentication Code) or similar techniques to ensure data integrity.\nConfiguration Hardening: Restrict access to authentication settings and secure configuration files.\nAudit Logging: Maintain detailed logs for any changes made to authentication configurations and review them regularly for suspicious activity\n\nCategory: Reduce ",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 3,
+                  "score": "8"
+                }
+              ]
+            }
+          },
+          {
+            "position": {
+              "x": 1090,
+              "y": 620
+            },
+            "size": {
+              "width": 350,
+              "height": 110
+            },
+            "attrs": {
+              "text": {
+                "text": "Transaction \n Processor \n"
+              },
+              "body": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "process",
+            "zIndex": 5,
+            "id": "06821eaa-2724-413d-a729-6e5d052f6f95",
+            "data": {
+              "type": "tm.Process",
+              "name": "Transaction \n Processor \n",
+              "description": "Processes financial transactions,\nenforces business rules, and ensures\ncompliance. Supports actions such as\npayments and transfers\n",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "handlesCardPayment": false,
+              "handlesGoodsOrServices": false,
+              "isWebApplication": false,
+              "privilegeLevel": "",
+              "threats": [
+                {
+                  "id": "ea565520-e1e9-4f71-ac95-50b7d51b8681",
+                  "title": "Repudiation ",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Repudiation",
+                  "description": "A user may deny initiating a transaction, claiming it was unauthorized. This repudiation could result in disputes and financial losses if the system cannot verify the legitimacy of the transaction",
+                  "mitigation": "Digital Signatures: Implement digital signatures to authenticate and validate each transaction.\nNon-Repudiable Logging: Log transactions with cryptographic methods that make it infeasible for users to deny actions.\nAudit Trail: Maintain a secure audit trail that includes details such as user identity, IP address, and timestamp for all transactions\n\nCategory: Reduce",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 4,
+                  "score": "7"
+                }
+              ]
+            }
+          },
+          {
+            "position": {
+              "x": 1335,
+              "y": 360
+            },
+            "size": {
+              "width": 110,
+              "height": 100
+            },
+            "attrs": {
+              "text": {
+                "text": "AI/ML \nMonitoring \nModule\n"
+              },
+              "body": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "process",
+            "id": "3ce4c13b-0db1-46dc-a980-b54448d5f707",
+            "zIndex": 6,
+            "data": {
+              "type": "tm.Process",
+              "name": "AI/ML \nMonitoring \nModule\n",
+              "description": "Detects suspicious patterns and\npotential fraud using AI algorithms,\nmonitoring transaction data for realtime threat detection",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "handlesCardPayment": false,
+              "handlesGoodsOrServices": false,
+              "isWebApplication": false,
+              "privilegeLevel": "",
+              "threats": [
+                {
+                  "id": "6873348e-1f6c-46a6-9b1b-0f50e28cdc9f",
+                  "title": "Elevation of Privilege",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Elevation of privilege",
+                  "description": "An attacker could attempt to gain higher privileges within the AI/ML Monitoring Module, potentially allowing them to modify detection parameters or disable fraud alerts. Unauthorized privilege escalation within this module could result in fraudulent activities going undetected",
+                  "mitigation": "Role-Based Access Control (RBAC): Enforce strict role-based access controls to ensure that only authorized users have access to privileged functions.\nPrivileged Access Monitoring: Log and monitor all privileged access actions, with alerts set up for unusual behavior.\nSeparation of Duties: Ensure that users who manage monitoring configurations cannot access or alter the transaction data they are monitoring\n\nCategory: Avoid ",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 5,
+                  "score": "8"
+                }
+              ]
+            }
+          },
+          {
+            "position": {
+              "x": 1020,
+              "y": 280
+            },
+            "size": {
+              "width": 140,
+              "height": 130
+            },
+            "attrs": {
+              "text": {
+                "text": "API Gateway "
+              },
+              "body": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "process",
+            "id": "239d7f1a-5376-49d9-aeb4-6bb80e176435",
+            "zIndex": 7,
+            "data": {
+              "type": "tm.Process",
+              "name": "API Gateway ",
+              "description": "Manages secure communication with\nexternal systems, connecting\nApplication layer components to data\nlayer",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "handlesCardPayment": false,
+              "handlesGoodsOrServices": false,
+              "isWebApplication": false,
+              "privilegeLevel": "",
+              "threats": [
+                {
+                  "id": "a8e663e9-c5bb-45f2-b9c3-0f37fe29cdc1",
+                  "title": "Information Disclosure",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Information disclosure",
+                  "description": "Sensitive data passing through the API Gateway may be intercepted by an unauthorized party if it is not properly encrypted, potentially leading to data exposure and breaches",
+                  "mitigation": "SSL/TLS Encryption: Encrypt all data flows through the API Gateway using SSL/TLS to secure data in transit.\nToken-Based Authentication: Use secure tokens like OAuth or JWT to authenticate API requests and protect data.\nAccess Control: Limit access to the API Gateway to authenticated and authorized users only.\n\nCategory: Reduce ",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 6,
+                  "score": "6"
+                }
+              ]
+            }
+          },
+          {
+            "position": {
+              "x": 1130,
+              "y": 19.999999999999943
+            },
+            "size": {
+              "width": 180,
+              "height": 60
+            },
+            "attrs": {
+              "text": {
+                "text": "Data Management System"
+              },
+              "topLine": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "strokeDasharray": null
+              },
+              "bottomLine": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "store",
+            "id": "e17052f4-0381-412e-94f9-627aed920cd7",
+            "zIndex": 8,
+            "data": {
+              "type": "tm.Store",
+              "name": "Data Management System",
+              "description": "Securely stores all verified transaction data,\ncustomer information and compliance record,\nThe DBMS ensures that data is stored in a\nhighly secure environment, where it is\nencrypted and available for authorized access\nonly\n",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "isALog": false,
+              "isEncrypted": false,
+              "isSigned": false,
+              "storesCredentials": false,
+              "storesInventory": false,
+              "threats": [
+                {
+                  "id": "b403f244-4936-4f54-bd09-2426b1edb134",
+                  "title": "Denial of Service",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Denial of service",
+                  "description": "An attacker could attempt to overwhelm the Data Management System with excessive requests, leading to service unavailability for legitimate users",
+                  "mitigation": "Rate Limiting: Implement rate limits to control the volume of requests from each source.\nRedundancy and Load Balancing: Use redundant systems and load balancers to manage high request loads and maintain service availability.\nTraffic Monitoring: Implement intrusion detection to monitor traffic patterns and identify suspicious activity indicative of a Denial of Service (DoS) attack.\n\nCategory: Reduce ",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 7,
+                  "score": "8"
+                }
+              ]
+            }
+          },
+          {
+            "position": {
+              "x": 1500,
+              "y": 54.999999999999915
+            },
+            "size": {
+              "width": 110,
+              "height": 110
+            },
+            "attrs": {
+              "text": {
+                "text": "Encryption \nMechanisms"
+              },
+              "body": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "process",
+            "id": "30e16de5-ec00-4188-b7da-2c95cf9c03ae",
+            "zIndex": 9,
+            "data": {
+              "type": "tm.Process",
+              "name": "Encryption \nMechanisms",
+              "description": "Implements SSL/TLS protocols to ensure\ndata is encrypted both in transit and at rest,\nprotecting all sensitive information from\nunauthorized access",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "handlesCardPayment": false,
+              "handlesGoodsOrServices": false,
+              "isWebApplication": false,
+              "privilegeLevel": "",
+              "threats": [
+                {
+                  "id": "4fa4190f-e345-4576-94fc-9c18b193be9b",
+                  "title": "Information Disclosure",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Information disclosure",
+                  "description": "Sensitive data could be exposed if encryption mechanisms fail due to weak algorithms, inadequate key management, or misconfigurations, resulting in unauthorized access to data at rest.",
+                  "mitigation": "Strong Encryption Standards: Use robust encryption standards like AES-256 for data at rest and TLS 1.2 or higher for data in transit.\nSecure Key Management: Implement secure key management practices, such as using Hardware Security Modules (HSMs) to store encryption keys.\nRegular Encryption Audits: Conduct regular audits of encryption configurations to ensure compliance with security standards and to detect potential vulnerabilities.\n\nCategory: Reduce ",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 8,
+                  "score": "9"
+                }
+              ]
+            }
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Login\n Flow ",
+              "description": "Initiates Secure Login",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "id": "b27762b4-166a-47e1-a971-c461271cfa0b",
+            "source": {
+              "cell": "5d9f7155-0420-4007-9232-9b29a89f3969"
+            },
+            "target": {
+              "cell": "8a404883-41dc-4217-98c8-eff063b6983b"
+            },
+            "labels": [
+              "Login\n Flow "
+            ],
+            "vertices": [
+              {
+                "x": 520,
+                "y": 310
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Granted \nAccess ",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "id": "d7aa8b7f-e2ed-45fb-98a8-7e796bae5ce7",
+            "source": {
+              "cell": "8a404883-41dc-4217-98c8-eff063b6983b"
+            },
+            "target": {
+              "cell": "5d9f7155-0420-4007-9232-9b29a89f3969"
+            },
+            "vertices": [
+              {
+                "x": 510,
+                "y": 370
+              },
+              {
+                "x": 420,
+                "y": 320
+              }
+            ],
+            "labels": [
+              "Granted \nAccess "
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Authentication\n Results ",
+              "description": "Results of the User Authentication ",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "id": "56a3ca60-9ead-4f7e-8f99-e39a9c6b05f9",
+            "source": {
+              "cell": "b16d4ef7-6df1-4f5a-8a59-1b57bcd773d8"
+            },
+            "target": {
+              "cell": "8a404883-41dc-4217-98c8-eff063b6983b"
+            },
+            "labels": [
+              "Authentication\n Results "
+            ],
+            "vertices": [
+              {
+                "x": 700,
+                "y": 420
+              },
+              {
+                "x": 630,
+                "y": 375
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Authentication \nRequest ",
+              "description": "Authentication request",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "id": "6d58b926-3741-44af-a76b-678e602b8d40",
+            "source": {
+              "cell": "8a404883-41dc-4217-98c8-eff063b6983b"
+            },
+            "target": {
+              "cell": "b16d4ef7-6df1-4f5a-8a59-1b57bcd773d8"
+            },
+            "labels": [
+              "Authentication \nRequest "
+            ],
+            "vertices": [
+              {
+                "x": 780,
+                "y": 270
+              },
+              {
+                "x": 814.5,
+                "y": 320
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Transaction\n Request\n Results ",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "id": "5694363a-1fd4-4f84-83e9-e21d3d74e4ec",
+            "source": {
+              "cell": "06821eaa-2724-413d-a729-6e5d052f6f95"
+            },
+            "target": {
+              "cell": "5d9f7155-0420-4007-9232-9b29a89f3969"
+            },
+            "labels": [
+              "Transaction\n Request\n Results "
+            ],
+            "vertices": [
+              {
+                "x": 550,
+                "y": 700
+              },
+              {
+                "x": 450,
+                "y": 700
+              },
+              {
+                "x": 240,
+                "y": 660
+              },
+              {
+                "x": 100,
+                "y": 500
+              },
+              {
+                "x": 100,
+                "y": 380
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Transaction\n Request\n Once Verified ",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "id": "5a6c009c-a922-4740-ad01-984269b8cb4a",
+            "source": {
+              "cell": "5d9f7155-0420-4007-9232-9b29a89f3969"
+            },
+            "target": {
+              "cell": "06821eaa-2724-413d-a729-6e5d052f6f95"
+            },
+            "vertices": [
+              {
+                "x": 240,
+                "y": 340
+              },
+              {
+                "x": 140,
+                "y": 430
+              },
+              {
+                "x": 380,
+                "y": 620
+              }
+            ],
+            "labels": [
+              "Transaction\n Request\n Once Verified "
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Monitoring \nResults ",
+              "description": "If Clear, then continues ",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "id": "86531ee8-4c50-4a69-9d62-55e2d13d6534",
+            "source": {
+              "cell": "3ce4c13b-0db1-46dc-a980-b54448d5f707"
+            },
+            "target": {
+              "cell": "06821eaa-2724-413d-a729-6e5d052f6f95"
+            },
+            "labels": [
+              "Monitoring \nResults "
+            ],
+            "vertices": [
+              {
+                "x": 1290,
+                "y": 470
+              },
+              {
+                "x": 1252.5,
+                "y": 520
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Monitored Data\n for Storage",
+              "description": "Represents the monitored and analyzed transaction data that flows to storage.",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "id": "e278d2ca-4250-47ff-95ca-d0e4d75d693b",
+            "source": {
+              "cell": "239d7f1a-5376-49d9-aeb4-6bb80e176435"
+            },
+            "target": {
+              "cell": "3ce4c13b-0db1-46dc-a980-b54448d5f707"
+            },
+            "labels": [
+              "Monitored Data\n for Storage"
+            ],
+            "vertices": [
+              {
+                "x": 1260,
+                "y": 340
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Monitoring\n Request ",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "id": "64c60e5b-d47e-435f-be87-d41d3c44b890",
+            "source": {
+              "cell": "06821eaa-2724-413d-a729-6e5d052f6f95"
+            },
+            "target": {
+              "cell": "3ce4c13b-0db1-46dc-a980-b54448d5f707"
+            },
+            "labels": [
+              "Monitoring\n Request "
+            ],
+            "vertices": [
+              {
+                "x": 1340.5,
+                "y": 510
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Data Storage Request ",
+              "description": "Ensures data is encrypted in transit and at rest",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "id": "d962b802-abd6-4427-844c-08deb7ec9b53",
+            "source": {
+              "x": 1257,
+              "y": 80
+            },
+            "target": {
+              "cell": "30e16de5-ec00-4188-b7da-2c95cf9c03ae"
+            },
+            "vertices": [
+              {
+                "x": 1330,
+                "y": 115.5
+              }
+            ],
+            "labels": [
+              "Data Storage Request "
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Verified \nData for Storage",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "id": "0ed1fa54-bf77-4b02-9ecf-2df43fd269d0",
+            "source": {
+              "cell": "239d7f1a-5376-49d9-aeb4-6bb80e176435"
+            },
+            "target": {
+              "cell": "e17052f4-0381-412e-94f9-627aed920cd7"
+            },
+            "labels": [
+              "Verified \nData for Storage"
+            ],
+            "vertices": [
+              {
+                "x": 1250,
+                "y": 150
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "User Interaction ",
+              "description": "Account Management, Transaction Requests",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "id": "cd463d6f-d7dc-4953-aa91-2cbbbdbca1d6",
+            "source": {
+              "x": 166,
+              "y": 165
+            },
+            "target": {
+              "cell": "5d9f7155-0420-4007-9232-9b29a89f3969"
+            },
+            "vertices": [
+              {
+                "x": 260,
+                "y": 210
+              }
+            ],
+            "labels": [
+              "User Interaction "
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Transaction Data \nFor Storage ",
+              "description": "s",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "id": "1fe6bb14-d579-4784-a31d-279f3eda948a",
+            "source": {
+              "cell": "239d7f1a-5376-49d9-aeb4-6bb80e176435"
+            },
+            "target": {
+              "cell": "06821eaa-2724-413d-a729-6e5d052f6f95"
+            },
+            "labels": [
+              "Transaction Data \nFor Storage "
+            ],
+            "vertices": [
+              {
+                "x": 1030,
+                "y": 440
+              },
+              {
+                "x": 1070,
+                "y": 500
+              },
+              {
+                "x": 1147,
+                "y": 550
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "diagramTop": 1,
+    "reviewer": "Mamoona Homayun ",
+    "threatTop": 8
+  }
+}
