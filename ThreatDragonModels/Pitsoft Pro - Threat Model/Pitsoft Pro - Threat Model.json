@@ -1,5 +1,5 @@
 {
-  "version": "v2.3.0-RC1",
+  "version": "2.2.0",
   "summary": {
     "title": "Pitsoft Pro - Threat Model",
     "owner": "Kanyinsola Fakehinde",
@@ -1803,44 +1803,6 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Boundary",
-              "name": "Trust Boundary",
-              "description": "",
-              "isTrustBoundary": true,
-              "hasOpenThreats": false
-            },
-            "labels": [
-              {
-                "attrs": {
-                  "label": {
-                    "text": "Trust Boundary"
-                  }
-                }
-              }
-            ],
-            "id": "53d8fc0d-24ca-492e-8c9f-86f0470ca9e2",
-            "source": {
-              "x": 22,
-              "y": 150
-            },
-            "target": {
-              "x": 870,
-              "y": 20
-            },
-            "vertices": [
-              {
-                "x": 450,
-                "y": 120
-              }
-            ]
-          },
-          {
-            "shape": "trust-boundary-curve",
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Boundary",
               "name": "Trust \nBoundary",
               "description": "",
               "isTrustBoundary": true,
@@ -1944,6 +1906,44 @@
               {
                 "x": 800,
                 "y": 470
+              }
+            ]
+          },
+          {
+            "shape": "trust-boundary-curve",
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Boundary",
+              "name": "Trust Boundary",
+              "description": "",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false
+            },
+            "labels": [
+              {
+                "attrs": {
+                  "label": {
+                    "text": "Trust Boundary"
+                  }
+                }
+              }
+            ],
+            "id": "53d8fc0d-24ca-492e-8c9f-86f0470ca9e2",
+            "source": {
+              "x": 10,
+              "y": 210
+            },
+            "target": {
+              "x": 880,
+              "y": 120
+            },
+            "vertices": [
+              {
+                "x": 460,
+                "y": 210
               }
             ]
           }
