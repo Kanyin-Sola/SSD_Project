@@ -1478,10 +1478,20 @@
             },
             "vertices": [
               {
-                "x": 1010,
-                "y": 530
+                "x": 970,
+                "y": 510
               }
-            ]
+            ],
+            "tools": {
+              "items": [
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead"
+              ],
+              "name": null
+            }
           },
           {
             "shape": "flow",
