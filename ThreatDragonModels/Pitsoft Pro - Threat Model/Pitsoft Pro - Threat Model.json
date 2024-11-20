@@ -1573,7 +1573,7 @@
             "data": {
               "type": "tm.Flow",
               "name": "Sends authen\ntoken",
-              "description": "After successful authentication, the authentication system sends an authorization token to the API gateway, which allows the user to access the system.",
+              "description": "authentication system validates user credentials, generates a token that's sent to API Gateway",
               "outOfScope": false,
               "reasonOutOfScope": "",
               "hasOpenThreats": false,
@@ -1675,7 +1675,7 @@
             "data": {
               "type": "tm.Flow",
               "name": "Verifies then\nvalidates access",
-              "description": "The API gateway verifies the authorisation token and validates the user’s access level, ensuring they have permission to perform requested actions.",
+              "description": "API Gateway receives user request with a token then further verifies before access is granted ",
               "outOfScope": false,
               "reasonOutOfScope": "",
               "hasOpenThreats": false,
