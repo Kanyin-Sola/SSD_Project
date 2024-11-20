@@ -1,5 +1,5 @@
 {
-  "version": "v2.3.0-RC1",
+  "version": "2.2.0",
   "summary": {
     "title": "Pitsoft Pro - Threat Model",
     "owner": "Kanyinsola Fakehinde",
@@ -1340,17 +1340,7 @@
                 "x": 160,
                 "y": 260
               }
-            ],
-            "tools": {
-              "items": [
-                "boundary",
-                "button-remove",
-                "vertices",
-                "source-arrowhead",
-                "target-arrowhead"
-              ],
-              "name": null
-            }
+            ]
           },
           {
             "shape": "flow",
