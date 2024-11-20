@@ -1,5 +1,5 @@
 {
-  "version": "v2.3.0-RC1",
+  "version": "2.2.0",
   "summary": {
     "title": "Pitsoft Pro - Threat Model",
     "owner": "Kanyinsola Fakehinde",
@@ -379,8 +379,8 @@
                 "text": "Web\nApplication"
               },
               "body": {
-                "stroke": "red",
-                "strokeWidth": 2.5,
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
                 "strokeDasharray": null
               }
             },
@@ -476,7 +476,7 @@
               "description": "Pitsoft Pro -  A user-friendly web application and provides insights and advice on performance improvement.",
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": true,
+              "hasOpenThreats": false,
               "handlesCardPayment": false,
               "handlesGoodsOrServices": false,
               "isWebApplication": true,
@@ -485,7 +485,7 @@
                 {
                   "id": "30ee6619-7b77-498e-8164-f55e38415c45",
                   "title": "Malicious Users",
-                  "status": "Open",
+                  "status": "Mitigated",
                   "severity": "Low",
                   "type": "Denial of service",
                   "description": "Malicious users could flood the system with requests, causing service disruption.",
@@ -501,7 +501,7 @@
                 "tampering": 0,
                 "repudiation": 0,
                 "informationDisclosure": 0,
-                "denialOfService": 3,
+                "denialOfService": 4,
                 "elevationOfPrivilege": 0
               }
             }
@@ -635,12 +635,25 @@
                   "new": false,
                   "number": 7,
                   "score": "8/25"
+                },
+                {
+                  "id": "0ec4499c-3f96-400c-8b7e-a5f231686f41",
+                  "title": "User Denies Submitting Incorrect Data",
+                  "status": "Mitigated",
+                  "severity": "Medium",
+                  "type": "Repudiation",
+                  "description": "A malicious user denies submitting incorrect data, causing analysis errors and impacting race performance strategies. ",
+                  "mitigation": "Reduce: Enforce user authentication and implement immutable logs for telemetry data submissions. Use cryptographic techniques like digital signatures to ensure non-repudiation. ",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 10,
+                  "score": "8/25"
                 }
               ],
               "threatFrequency": {
                 "spoofing": 0,
                 "tampering": 3,
-                "repudiation": 0,
+                "repudiation": 1,
                 "informationDisclosure": 0,
                 "denialOfService": 0,
                 "elevationOfPrivilege": 0
@@ -661,8 +674,8 @@
                 "text": "Authentication\nSystem"
               },
               "body": {
-                "stroke": "red",
-                "strokeWidth": 2.5,
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
                 "strokeDasharray": null
               }
             },
@@ -758,7 +771,7 @@
               "description": "Manages user logins, registration, and role-based access controls.",
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": true,
+              "hasOpenThreats": false,
               "handlesCardPayment": false,
               "handlesGoodsOrServices": false,
               "isWebApplication": false,
@@ -767,7 +780,7 @@
                 {
                   "id": "9286c5e1-8cc9-4be1-af9d-ed60cbdc4199",
                   "title": "Exposed User Credentials",
-                  "status": "Open",
+                  "status": "Mitigated",
                   "severity": "Medium",
                   "type": "Information disclosure",
                   "description": "Sensitive user credentials could be exposed during transmission.",
@@ -780,7 +793,7 @@
                 {
                   "id": "d7c429c0-4f6b-4429-9fef-87cfe74ad590",
                   "title": "Man-in-the-middle Attack",
-                  "status": "Open",
+                  "status": "Mitigated",
                   "severity": "High",
                   "type": "Spoofing",
                   "description": "Man-in-the-middle attack intercepts and modifies login credentials during authentication.\n\n",
@@ -792,13 +805,20 @@
                 }
               ],
               "threatFrequency": {
-                "spoofing": 4,
+                "spoofing": 5,
                 "tampering": 0,
                 "repudiation": 0,
-                "informationDisclosure": 3,
+                "informationDisclosure": 4,
                 "denialOfService": 0,
                 "elevationOfPrivilege": 0
               }
+            },
+            "tools": {
+              "items": [
+                "boundary",
+                "button-remove"
+              ],
+              "name": null
             }
           },
           {
@@ -815,8 +835,8 @@
                 "text": "API Gateway"
               },
               "body": {
-                "stroke": "red",
-                "strokeWidth": 2.5,
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
                 "strokeDasharray": null
               }
             },
@@ -912,7 +932,7 @@
               "description": "Handles data processing, analytics,\n and AI-driven insights. \nHandles requests between frontend,\n backend and other services",
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": true,
+              "hasOpenThreats": false,
               "handlesCardPayment": false,
               "handlesGoodsOrServices": false,
               "isWebApplication": false,
@@ -921,7 +941,7 @@
                 {
                   "id": "fae2f208-b03e-4630-99da-1e63138363f9",
                   "title": "Unauthorised Access",
-                  "status": "Open",
+                  "status": "Mitigated",
                   "severity": "Medium",
                   "type": "Elevation of privilege",
                   "description": "Exploiting vulnerabilities in the API gateway to gain unauthorised higher-level access.",
@@ -951,7 +971,7 @@
                 "repudiation": 0,
                 "informationDisclosure": 0,
                 "denialOfService": 0,
-                "elevationOfPrivilege": 4
+                "elevationOfPrivilege": 5
               }
             }
           },
@@ -1953,6 +1973,6 @@
     ],
     "diagramTop": 1,
     "reviewer": "",
-    "threatTop": 9
+    "threatTop": 10
   }
 }
