@@ -1279,6 +1279,10 @@
             },
             "vertices": [
               {
+                "x": 220,
+                "y": 200
+              },
+              {
                 "x": 250,
                 "y": 210
               }
@@ -1336,7 +1340,17 @@
                 "x": 160,
                 "y": 260
               }
-            ]
+            ],
+            "tools": {
+              "items": [
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead"
+              ],
+              "name": null
+            }
           },
           {
             "shape": "flow",
@@ -1887,6 +1901,10 @@
               {
                 "x": 410,
                 "y": 380
+              },
+              {
+                "x": 380,
+                "y": 350
               }
             ]
           },
